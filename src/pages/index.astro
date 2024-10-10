@@ -1,27 +1,36 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Adventajes from "@/sections/Adventajes.astro";
-import Brands from "@/sections/Brands.astro";
-import Footer from "@/sections/Footer.astro";
-import Header from "@/sections/Header.astro";
-import Hero from "@/sections/Hero.astro";
-import Pricing from "@/sections/Pricing.astro";
-import Services from "@/sections/Services.astro";
-import { getLandingData } from "@/services/data.service";
-
-const data = await getLandingData();
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Brands from "../components/sections/Brands.astro";
+import Services from "../components/sections/Services.astro";
+import FAQ from "../components/sections/FAQ.astro";
+import Features from "../components/sections/Features.astro";
+import CTA from "../components/sections/CTA.astro";
+import Solutions from "../components/sections/Solutions.astro";
 ---
 
-<Layout meta={data.meta}>
-  <Header data={data.headerData} />
-  <main class="flex flex-col justify-center items-center">
-    <div class="w-3/4">
-      <Hero data={data.heroData} />
-      <Services data={data.servicesData} />
-      <Adventajes data={data.adventajesData} />
-      <Brands data={data.brandsData} />
-      <Pricing data={data.pricingData} />
-    </div>
-    <Footer data={data.footerData} />
+<Layout title="Welcome to the Agency template">
+  <main class="flex flex-col overflow-hidden">
+    <Hero className="py-10 md:py-16" />
+    <Solutions className="pt-10 md:pt-16" />
+    <Services className="py-10 md:py-16" />
+    <Brands className="py-10 md:py-16" />
+    <Features className="py-10 md:py-16" />
+    <FAQ className="py-10 md:py-16" />
+    <CTA className="py-10 md:py-16" />
+    <!-- Hero -->
+    <!-- headline, subheading, image, cta button, results -->
+    <!-- Problems/Solutions -->
+    <!-- title, painpoint, aggitate pain, introduce solution, video  -->
+    <!-- Benefits/Services -->
+    <!-- benefit title, thanks to features, visual -->
+    <!-- Testimonials/Brands -->
+    <!-- reviews, partners -->
+    <!-- Features -->
+    <!-- ~10 features, more technical than emotional, in a list -->
+    <!-- FAQ -->
+    <!-- questions, answers, video -->
+    <!-- CTA -->
+    <!-- Question, button -->
   </main>
 </Layout>

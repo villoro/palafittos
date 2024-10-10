@@ -1,15 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        white: "#FFFFFF",
-        black: "#161925",
-        primary: "#1D4ED8",
-        secondary: "#0C8346",
+        body: "rgb(var(--color-bg))",
+        "box-bg": "rgb(var(--color-box))",
+        "box-shadow": "rgb(var(--box-sd))",
+        "box-border": "rgb(var(--box-border))",
+        primary: "#1d4ed8",
+        "heading-1": "rgb(var(--heading-1))",
+        "heading-2": "rgb(var(--heading-2))",
+        "heading-3": "rgb(var(--heading-3))",
+      },
+      screens: {
+        midmd: "880px",
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [],
 };
