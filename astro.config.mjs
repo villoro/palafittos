@@ -1,10 +1,12 @@
-import { defineConfig } from "astro/config";
-
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
+// @ts-check
+import { defineConfig } from 'astro/config';
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
-  integrations: [tailwind()],
-  site: "https://vbartalis.github.io",
-  base: "/",
+vite: {
+    plugins: [tailwindcss()],
+  },
+    // add yur domain name here
+   site: 'https://lexingtonthemes.com',
+  integrations: [sitemap()]
 });
