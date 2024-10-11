@@ -1,6 +1,6 @@
 {
   "name": "palafittos",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
